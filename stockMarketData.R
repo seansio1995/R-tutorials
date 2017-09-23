@@ -84,3 +84,17 @@ getSymbols("AAPL",src="google")
 chartSeries(AAPL,theme="white",TA="addSMA(100)",subset="2009::2013")
 
 candleChart(AAPL,multi.col = T,TA=NULL,subset = "2016-07::2016-08")
+
+
+library(quantmod)
+getSymbols(c("IBEX","AAPL"),src="google")
+chartSeries(IBEX$IBEX.Close, theme="white", TA="addEMA(50,
+col='black');addEMA(200, col='blue')")
+
+chartSeries(AAPL, theme="white", TA="addEMA(50,
+col='black');addEMA(200, col='blue')")
+
+AAPL.EMA.50 <- EMA(AAPL$AAPL.Close, n=50, )
+AAPL.EMA.200 <- EMA(AAPL$AAPL.Close, n=200, )
+addTA(AAPL.EMA.50 - AAPL.EMA.200, col='blue',
+      type='h',legend="50-200 MA")
