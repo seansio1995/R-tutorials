@@ -74,7 +74,7 @@ gsub("my", "OUR", teststring, ignore.case = T)
 
 
 # 4. working with numbers - deleting numbers
-numberstring <- c("3445 is GReater than 23 - @???!¡ì$",
+numberstring <- c("3445 is GReater than 23 - @???!Â¡Ã¬$",
                   "Tom coded 11 Java scrips and 23 Python scripts")
 
 
@@ -121,7 +121,7 @@ teststring <- c("my teststring to explain how substitution with my R Base works"
                 "another teststring for My example of gsub and sub")
 
 
-numberstring <- c("3445 is GReater than 23 - @???!¡ì$",
+numberstring <- c("3445 is GReater than 23 - @???!Â¡Ã¬$",
                   "Tom coded 11 Java scrips and 23 Python scripts")
 
 
@@ -452,18 +452,18 @@ histogram(data=scores, ~score|company, main="Sentiment Analysis of 4 Companies",
 ###twitter connection
 
 library("httr")
-key="Kcaho6EqbO5iXm8Du8QwK9ukl"
+key=""
 
-secret="mCkCFfedn19gkHN1h0r5X3Qfwm89WuC3s4uQJwjR2X68Ei5S9f"
+secret=""
 
-access_token<-"2281960826-dKey8Nb3M2sQwwsOAWfr6fnEB06CmD6TzyiOOkf"
+access_token<-""
 
   
-access_secret<-"C6i0GdVsGkgYYPtcwChefaWB3LL4mpGHGeE5xZQrg5L3i"
+access_secret<-""
 
-download.file(url="http://curl.haxx.se/ca/cacert.pem", 
-              destfile="C:/Users/seansio1995/Documents/cacert.pem",
-              method="auto")
+# download.file(url="http://curl.haxx.se/ca/cacert.pem", 
+#               destfile="C:/Users/seansio1995/Documents/cacert.pem",
+#               method="auto")
 setup_twitter_oauth(key,secret,access_token,access_secret)
 
 # authenticate <-  OAuthFactory$new(consumerKey=key,
